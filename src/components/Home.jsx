@@ -3,11 +3,12 @@ import React from "react";
 import { Link } from "react-router-dom";
 import about from "../images/oluwamomi-rbg.png";
 import { ProjectsDatas } from "../components/ProjectsDatas";
+import  Hero  from "../components/Hero";
 import Contact from "../components/Contact";
 
 const Home = () => {
   return (
-    <div className="flex flex-col md:flex-row h-screen">
+    <div className="flex flex-col md:flex-row h-screen font-poppins">
       {/* Left section */}
       <div className="flex h-full w-full md:w-1/3  bg-[#0d010f] text-black flex-col items-center px-10 pt-24">
         <div className="bg-gray-400 rounded-md w-full md:w-[20rem] xs:h-full mb-4 mx-auto pb-20">
@@ -22,9 +23,8 @@ const Home = () => {
 
           {/* Content */}
           <div className="text-center mt-6 mb-10 ">
-            <h1 className="text-2xl font-bold mb-2">Aabraham James</h1>
-            <p className="mb-1">Product Designer & Developer</p>
-            <p className="mb-4">Istanbul, Turkey</p>
+            <h1 className="text-2xl font-bold mb-2">Oluwamomi Salvation</h1>
+            <p className="mb-1">Web Designer | Web Developer</p>
             {/* Social Media Links */}
             <div className="flex justify-center space-x-4 mb-4">
               <Link to="/dribbble" className="text-purple-900">
@@ -40,15 +40,17 @@ const Home = () => {
                 <i className="fas fa-envelope"></i>
               </Link>
             </div>
-            <button className="bg-purple-600 text-white py-2 px-4 rounded">
-              Let's Talk
-            </button>
+
           </div>
         </div>
       </div>
 
       {/* Right section */}
       <div className="w-full md:w-2/3 bg-[#0d010f] text-white px-10 pt-24 md:overflow-y-auto">
+
+            <div className="">
+              <Hero />
+            </div>
         <h1 className="text-3xl font-bold mb-4">Transforming Your Ideas into Reality</h1>
         <p className="mb-4">
           Passionate about creating intuitive and engaging user experiences.

@@ -1,7 +1,7 @@
 
 import aboutMe from "../images/about-me-trans.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import AnimatedText from "../components/AnimatedText";
 import {
   faBullhorn,
   faCode,
@@ -80,9 +80,16 @@ function AboutMe() {
   ];
 
   return (
-    <div className="about-section">
+    <div className="bg-green-700">
       <div className="introduction">
         <h2 className="abt__heading">About Me</h2>
+
+
+        <div className="project-container">
+        <AnimatedText />
+      </div>
+
+        
         <div className="box-container">
           <div className="abt-img">
             <img src={aboutMe} alt="" lang="lazy" />

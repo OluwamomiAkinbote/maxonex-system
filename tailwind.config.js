@@ -4,6 +4,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
       screens: {
         'xs': '336px', // Add a custom breakpoint for extra-small screens
         'sm': '640px', // Default sm size (keep unchanged)

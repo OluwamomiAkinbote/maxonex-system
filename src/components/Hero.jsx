@@ -1,11 +1,7 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { Typewriter } from "react-simple-typewriter";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HeroFooter from "../components/HeroFooter";
 import AnimatedText from "../components/AnimatedText";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const Hero = () => {
   const TEXTS = [
@@ -15,36 +11,10 @@ const Hero = () => {
     "Graphic Design",
   ];
 
-  const textContainerRef = useRef(null);
-
-  // GSAP ScrollTrigger Animations
-  useEffect(() => {
-    const textSections = textContainerRef.current.querySelectorAll(".text-section");
-
-    textSections.forEach((section) => {
-      gsap.fromTo(
-        section,
-        { opacity: 0, y: 50 },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 1.2,
-          ease: "power2.out",
-          scrollTrigger: {
-            trigger: section,
-            start: "top 80%",
-            end: "top 50%",
-            scrub: true,
-          },
-        }
-      );
-    });
-  }, []);
-
   return (
-    <div ref={textContainerRef} className="mb-6 space-y-10">
+    <div className="mb-6 space-y-10">
       {/* Text Section */}
-      <div className="text-center lg:text-left max-w-4xl mx-auto space-y-6 text-section">
+      <div className="text-center lg:text-left max-w-4xl mx-auto space-y-6 text-section animate-fadeInUp">
         <h4 className="text-lg lg:text-xl text-gray-300">
           Your <span className="font-semibold text-white">Best</span>
         </h4>
@@ -76,12 +46,11 @@ const Hero = () => {
 
       {/* Another Text Section */}
 
-
       {/* Footer Section */}
-      <div className="project-container text-section">
+      <div className="project-container text-section animate-fadeInUp">
         <HeroFooter />
       </div>
-      <div className="m-8">
+      <div className="m-8 animate-fadeInUp">
         <AnimatedText />
       </div>
     </div>

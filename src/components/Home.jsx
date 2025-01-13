@@ -5,13 +5,14 @@ import about from "../images/oluwamomi-rbg.png";
 import { ProjectsDatas } from "../components/ProjectsDatas";
 import  Hero  from "../components/Hero";
 import Contact from "../components/Contact";
+import FeaturesSection from "../components/FeatureSection";
 
 const Home = () => {
   return (
-    <div className="flex flex-col md:flex-row h-screen font-poppins">
+    <div className="flex flex-col md:flex-row h-screen font-poppins ">
       {/* Left section */}
-      <div className="flex h-full w-full md:w-1/3  bg-[#0d010f] text-black flex-col items-center px-10 pt-24">
-        <div className="bg-gray-400 rounded-md w-full md:w-[20rem] xs:h-full mb-4 mx-auto pb-20">
+      <div className="flex h-full w-full md:w-1/3  bg-[#0d010f] text-black flex-col items-center px-12 pt-24 ">
+        <div className="bg-gray-400 rounded-md w-full md:w-[20rem] xs:h-full mb-4 pb-20 ">
           {/* Image */}
           <div className="flex justify-center items-center mt-6 bg-[#0d010f] mx-5 xs:mx-12 rounded-full reflective-bg overflow-hidden">
             <img
@@ -51,47 +52,14 @@ const Home = () => {
             <div className="">
               <Hero />
             </div>
-        <h1 className="text-3xl font-bold mb-4">Transforming Your Ideas into Reality</h1>
-        <p className="mb-4">
-          Passionate about creating intuitive and engaging user experiences.
-          Specialize in transforming ideas into beautifully crafted products.
-        </p>
-        {/* Content */}
-        <div className="mb-4">
-          <h2 className="text-2xl font-bold mb-2">Experience the Difference</h2>
-          <p>We offer a wide range of services to meet your needs and exceed your expectations.</p>
-        </div>
-        {/* Buttons */}
-        <div className="flex space-x-4">
-          <button className="bg-green-400 hover:bg-green-500 text-white font-bold py-2 px-4 rounded transition duration-300">
-            Contact Us
-          </button>
-          <button className="bg-green-400 hover:bg-green-500 text-white font-bold py-2 px-4 rounded transition duration-300">
-            Learn More
-          </button>
-        </div>
-        <div className="preview-sections">
-          <div className="home__abt">
-            <h2 className="text-4xl font-extrabold">About Me</h2>
-            <div className="home__abt-box">
-              <div className="home__abt-image">
-                <img src={about} alt="" loading="lazy" />
-              </div>
-              <div className="home__abt-content">
-                <p>
-                  Welcome to my digital space! I'm a web professional with a
-                  passion for creating captivating online experiences. As an
-                  expert in web design, development, and marketing, I specialize
-                  in crafting visually appealing websites. I stay on top of
-                  industry trends to ensure your project is cutting-edge. If you
-                  want to learn more about me and my journey, dive into my story
-                  on the About Me page. Let's connect and explore the exciting
-                  world of digital possibilities together.
-                </p>
-                <Link to="/about">Read more</Link>
-              </div>
+            <div className="">
+              <FeaturesSection />
             </div>
-          </div>
+        
+  
+
+        <div className="preview-sections">
+
 
           <div className="projects">
             <h2 className="heading">projects</h2>

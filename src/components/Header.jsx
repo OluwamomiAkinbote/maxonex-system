@@ -6,8 +6,8 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <div className="sticky top-0 flex justify-center items-center bg-[#0d010f] p-3 ">
-      <div className="flex space-x-2 bg-gray-800 p-2 rounded-md">
+    <div className="sticky top-0 flex justify-center items-center bg-[#0d010f] p-3 z-50">
+      <div className="flex space-x-2 bg-gray-800 p-2 rounded-md z-50">
         <Link
           to="/"
           className={`icon flex items-center justify-center p-2 rounded-md hover:bg-purple-500 transition duration-300 ${

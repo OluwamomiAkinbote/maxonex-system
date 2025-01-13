@@ -4,14 +4,14 @@ import '../animated-text.css';
 const AnimatedText = () => {
   return (
     <div className="animated-text-container">
-      <span className="animated-segment">Software Development</span>
-      <span className="animated-segment">Web Developer</span>
-      <span className="animated-segment">Web Designer</span>
-      <span className="animated-segment">Graphic Designer</span>
-      <span className="animated-segment">Software Development</span>
-      <span className="animated-segment">Web Developer</span>
-      <span className="animated-segment">Web Designer</span>
-      <span className="animated-segment">Graphic Designer</span>
+      <span className="animated-segment">Software Dev</span>
+      <span className="animated-segment">Website Dev</span>
+      <span className="animated-segment">Web Design</span>
+      <span className="animated-segment">Graphic Design</span>
+      <span className="animated-segment">Branding</span>
+      <span className="animated-segment">Website Dev</span>
+      <span className="animated-segment">Web Design</span>
+      <span className="animated-segment">Graphic Design</span>
     </div>
   );
 };

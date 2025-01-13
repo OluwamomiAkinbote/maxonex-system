@@ -1,27 +1,50 @@
-import React, { useEffect, useState } from "react";
-import TextTransition, { presets } from "react-text-transition";
+import React, { useEffect, useRef } from "react";
+import { Typewriter } from "react-simple-typewriter";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HeroFooter from "../components/HeroFooter";
 import AnimatedText from "../components/AnimatedText";
 
+gsap.registerPlugin(ScrollTrigger);
+
 const Hero = () => {
   const TEXTS = [
-    "Web Developer",
-    "Django Developer",
-    "Web Designer",
-    "Digital Marketer",
-    "Graphic Designer",
+    "Web Development",
+    "Web Design",
+    "Digital Marketing",
+    "Graphic Design",
   ];
-  const [index, setIndex] = useState(0);
 
+  const textContainerRef = useRef(null);
+
+  // GSAP ScrollTrigger Animations
   useEffect(() => {
-    const intervalId = setInterval(() => setIndex((index) => index + 1), 3000);
-    return () => clearInterval(intervalId);
+    const textSections = textContainerRef.current.querySelectorAll(".text-section");
+
+    textSections.forEach((section) => {
+      gsap.fromTo(
+        section,
+        { opacity: 0, y: 50 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: section,
+            start: "top 80%",
+            end: "top 50%",
+            scrub: true,
+          },
+        }
+      );
+    });
   }, []);
 
   return (
-    <div className="mb-6">
+    <div ref={textContainerRef} className="mb-6 space-y-10">
       {/* Text Section */}
-      <div className="text-center lg:text-left max-w-4xl mx-auto space-y-6">
+      <div className="text-center lg:text-left max-w-4xl mx-auto space-y-6 text-section">
         <h4 className="text-lg lg:text-xl text-gray-300">
           Your <span className="font-semibold text-white">Best</span>
         </h4>
@@ -33,9 +56,15 @@ const Hero = () => {
               fontWeight: "bold",
             }}
           >
-            <TextTransition springConfig={presets.wobbly} inline>
-              {TEXTS[index % TEXTS.length]}
-            </TextTransition>
+            <Typewriter
+              words={TEXTS}
+              loop={true}
+              cursor
+              cursorStyle="|"
+              typeSpeed={50}
+              deleteSpeed={30}
+              delaySpeed={3000}
+            />
           </span>
         </h2>
         <p className="text-sm lg:text-base text-gray-400 leading-relaxed">
@@ -44,10 +73,15 @@ const Hero = () => {
           projects.
         </p>
       </div>
-      <div className="project-container">
+
+      {/* Another Text Section */}
+
+
+      {/* Footer Section */}
+      <div className="project-container text-section">
         <HeroFooter />
       </div>
-      <div className="project-container">
+      <div className="m-8">
         <AnimatedText />
       </div>
     </div>

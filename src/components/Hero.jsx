@@ -1,7 +1,6 @@
 import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import HeroFooter from "../components/HeroFooter";
-import AnimatedText from "../components/AnimatedText";
 
 const Hero = () => {
   const TEXTS = [
@@ -9,14 +8,15 @@ const Hero = () => {
     "Web Design",
     "Digital Marketing",
     "Graphic Design",
+    "Creative Solutions",
   ];
 
   return (
-    <div className="mb-6 space-y-10">
+    <div className="mb-6 space-y-10 mx-auto">
       {/* Text Section */}
-      <div className="text-center lg:text-left max-w-4xl mx-auto space-y-6 text-section animate-fadeInUp">
+      <div className="text-center lg:text-left max-w-4xl mx-auto space-y-6 animate-fadeInUp">
         <h4 className="text-lg lg:text-xl text-gray-300">
-          Your <span className="font-semibold text-white">Best</span>
+          Your <span className="font-semibold text-white">Best</span> Choice for
         </h4>
         <h2 className="text-4xl lg:text-5xl font-bold text-white">
           <span
@@ -38,20 +38,14 @@ const Hero = () => {
           </span>
         </h2>
         <p className="text-sm lg:text-base text-gray-400 leading-relaxed">
-          Web professional skilled in design, development, and marketing. I
-          create engaging websites, track industry trends, and innovate digital
-          projects.
+          Skilled in design, development, and marketing, I create engaging websites, 
+          track industry trends, and innovate digital projects to boost your online presence.
         </p>
       </div>
 
-      {/* Another Text Section */}
-
       {/* Footer Section */}
-      <div className="project-container text-section animate-fadeInUp">
+      <div className="animate-fadeInUp">
         <HeroFooter />
-      </div>
-      <div className="m-8 animate-fadeInUp">
-        <AnimatedText />
       </div>
     </div>
   );

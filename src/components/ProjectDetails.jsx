@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import { projects } from "../components/ProjectsDatas";
 
 const ProjectDetails = () => {
-  const { id } = useParams();
-  const project = projects.find((project) => project.id === id);
+  const { title } = useParams();
+  const project = projects.find((project) => project.title === title);
 
   if (!project) {
     return <div>Project not found!</div>;

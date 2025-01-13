@@ -18,18 +18,18 @@ const features = [
 
 const FeatureSection = () => {
     return (
-        <section className="py-8 px-4">
+        <section className="mx-auto">
             <h1 className="text-3xl font-bold mb-8 text-center">Our Digital Agency</h1>
             <div className="flex flex-col space-y-8">
                 {features.map((feature, index) => (
                     <div key={index} className="relative flex items-start xs:mx-4">
-                        <FaCheckCircle className="text-green-500 xs:mr-2 md:mr-4" size={24} />
+                        <FaCheckCircle className="text-green-500 mr-4" size={24} />
                         <div className="ml-8">
                             <h2 className="md:text-xl xs:text-md font-semibold">{feature.title}</h2>
                             <p className="mt-2 text-gray-600 xs:text-sm md:text-xl">{feature.description}</p>
                         </div>
                         {index < features.length - 1 && (
-                            <div className="absolute xs:left-1 md:left-1 top-7 h-full w-0.5 bg-gradient-to-b from-green-500 to-transparent" style={{ height: 'calc(100% + 2rem)', top: '1.5rem' }}></div>
+                            <div className="absolute left-1 top-7 h-full w-0.5 bg-gradient-to-b from-green-500 to-transparent" style={{ height: 'calc(100% + 2rem)', top: '1.5rem' }}></div>
                         )}
                     </div>
                 ))}

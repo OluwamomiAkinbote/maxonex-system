@@ -6,6 +6,8 @@ import { ProjectsDatas } from "../components/ProjectsDatas";
 import  Hero  from "../components/Hero";
 import Contact from "../components/Contact";
 import FeaturesSection from "../components/FeatureSection";
+import Tools from "../components/Tools";
+
 
 const Home = () => {
   return (
@@ -18,7 +20,7 @@ const Home = () => {
             <img
               src={about}
               alt="Aabraham James"
-              className="rounded-full w-18 h-18 object-cover -mb-2 overflow-hidden"
+              className="rounded-full w-18 h-18 object-cover -mb-2"
             />
           </div>
 
@@ -55,26 +57,21 @@ const Home = () => {
             <div className="">
               <FeaturesSection />
             </div>
+            <div className="">
+              <ProjectsDatas />
+            </div>
+            <div className="">
+              <Tools />
+            </div>
+            <div className="">
+              <Contact />
+            </div>
+
+            
         
   
 
-        <div className="preview-sections">
-
-
-          <div className="projects">
-            <h2 className="heading">projects</h2>
-
-            <div className="project-container">
-              <ProjectsDatas />
-            </div>
-          </div>
-
-          <div className="contact">
-            <h2 className="contact-heading">contact me</h2>
-            <Contact />
-          </div>
-
-        </div>
+ 
       </div>
     </div>
   );

@@ -1,9 +1,7 @@
 import React from "react";
-import realEstate from "../images/React-Real- Estate project.png";
-import calculator from "../images/calculator.png";
-import addToCart from "../images/add-to-cart (1).png";
-
 import { Link } from "react-router-dom";
+import realEstate from "../images/React-Real- Estate project.png";
+import addToCart from "../images/add-to-cart (1).png";
 
 const projects = [
   {
@@ -12,14 +10,8 @@ const projects = [
     image: realEstate,
     link: "https://react-real-estate-project.vercel.app/",
     description: {
-      para1: `This is a personal project and dynamic project that is user-friendly. It involves sections like header, hero section, search section, house section, house details page and lastly the footer. 
-      The header section contains the company logo, navigation bar and login buttons. While the hero gives short welcome content to persuade client. It responsive across all devices.
-      `,
-      para2: `The search section functions dynamically in such that the client can perform various search that’s related to interests. On pressing the search button, it will filter out desired products.
-      At the house section, it only contains the images, number of amenities and locations. And lastly, the house details section is a page that is linked to the house section in such that when it’s clicked, it display the all details of the house of unique id, it give full details of such id including the agent contacts.
-      This project is responsive across all devices.
-      
-      `,
+      para1: `This is a personal and dynamic project that is user-friendly. It involves sections like header, hero section, search section, house section, house details page, and footer. The header contains the company logo, navigation bar, and login buttons. The hero section provides persuasive content for clients and is responsive across all devices.`,
+      para2: `The search section functions dynamically, allowing clients to perform interest-based searches. Pressing the search button filters out desired results. The house section displays images, amenities, and locations. The house details page gives full details of a specific property, including agent contacts. This project is fully responsive across all devices.`,
     },
     technologies: [
       "ReactJS",
@@ -27,7 +19,7 @@ const projects = [
       "HTML",
       "Tailwind CSS",
       "React icons",
-      " Responsive Design",
+      "Responsive Design",
       "PostCSS",
       "Github",
       "Vercel",
@@ -35,44 +27,61 @@ const projects = [
   },
   {
     id: "2",
-    title: "Ecommerce",
+    title: "Simple E-commerce Website",
     image: addToCart,
     link: "https://add-to-cart-ecommerce.vercel.app/",
     description:
-      "HTML, JS, CSS3 power a dynamic e-commerce site, ensuring seamless shopping. Intuitive design, responsive layout, and Add to Cart container optimize user convenience for effortless product selection and purchase.",
+      "HTML, JS, and CSS3 power a dynamic e-commerce site, ensuring seamless shopping. Intuitive design, responsive layout, and Add to Cart functionality optimize user convenience for effortless product selection and purchase.",
     technologies: ["JavaScript", "HTML5", "CSS3", "Responsive Design"],
-  },
-  {
-    id: "3",
-    title: "Simple Calculator",
-    image: calculator,
-    link: "https://simple-calculator-three-sage.vercel.app/",
-    description:
-      "A stylish HTML5 calculator with JavaScript for real-time arithmetic. Enhanced by CSS, it offers a user-friendly interface for quick and efficient calculations, accessible seamlessly across various devices.",
-    technologies: ["HTML5", "JavaScript", "CSS3"],
   },
 ];
 
 const ProjectsDatas = () => {
   return (
-    <div className="projects__container">
-      {projects.map((project, index) => (
-        <Link
-          to={`/project/${project.id}`}
-          key={index}
-          className="project__link"
-        >
-          <div className="project__card">
-            <div className="project__image">
-              <img src={project.image} alt={project.title} />
-            </div>
-            <div className="project__content">
-              <h3>{project.title}</h3>
-              <p>Technologies: {project.technologies.join(", ")}</p>
+    <div className=" text-white my-4">
+      <h1 className="text-4xl font-bold text-center mb-10">
+        Explore our <span className="text-purple-500">Projects</span>
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {projects.map((project) => (
+          <div
+            key={project.id}
+            className="bg-[#430e47] rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-95"
+          >
+            {/* Project Image */}
+            <Link to={`/project/${project.title}`}>
+              <div className="relative group">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-56 object-cover"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center opacity-0 group-hover:opacity-100 transition-all duration-300">
+                  <p className="text-white text-lg font-semibold">
+                    View Details
+                  </p>
+                </div>
+              </div>
+            </Link>
+
+            {/* Project Details */}
+            <div className="p-6">
+              <h3 className="text-2xl font-semibold mb-4">{project.title}</h3>
+              <p className="text-gray-400 mb-4">
+                Technologies: {project.technologies.join(", ")}
+              </p>
+              <Link
+                to={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-purple-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-purple-600 transition-colors duration-300"
+              >
+                View Live
+              </Link>
             </div>
           </div>
-        </Link>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };

@@ -6,7 +6,9 @@ import { ProjectsDatas } from "../components/ProjectsDatas";
 import  Hero  from "../components/Hero";
 import Contact from "../components/Contact";
 import FeaturesSection from "../components/FeatureSection";
-import Tools from "../components/Tools";
+import Testimonials from "../components/Testimonials";
+import Footer from "../components/Footer";
+
 
 
 const Home = () => {
@@ -49,7 +51,7 @@ const Home = () => {
       </div>
 
       {/* Right section */}
-      <div className="w-full md:w-2/3 bg-[#0d010f] text-white px-10 pt-24 md:overflow-y-auto">
+      <div className="w-full md:w-2/3 bg-[#0d010f] text-white px-4 pt-24 md:overflow-y-auto">
 
             <div className="">
               <Hero />
@@ -61,10 +63,14 @@ const Home = () => {
               <ProjectsDatas />
             </div>
             <div className="">
-              <Tools />
+              <Testimonials />
             </div>
+
             <div className="">
               <Contact />
+            </div>
+            <div className="">
+              <Footer />
             </div>
 
             

@@ -46,7 +46,7 @@ const ProjectsDatas = () => {
         {projects.map((project) => (
           <div
             key={project.id}
-            className="bg-[#430e47] rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-95"
+            className="bg-purple-950 rounded-lg shadow-lg overflow-hidden transform transition-all duration-300 hover:scale-95"
           >
             {/* Project Image */}
             <Link to={`/project/${project.title}`}>

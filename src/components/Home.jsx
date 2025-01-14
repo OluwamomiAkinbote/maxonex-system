@@ -51,7 +51,7 @@ const Home = () => {
       </div>
 
       {/* Right section */}
-      <div className="w-full md:w-2/3 bg-[#0d010f] text-white px-4 pt-24 md:overflow-y-auto">
+      <div className="w-full md:w-2/3 bg-[#0d010f] text-white px-5 pt-24 md:overflow-y-auto">
 
             <div className="">
               <Hero />

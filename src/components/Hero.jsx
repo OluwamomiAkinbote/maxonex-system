@@ -37,7 +37,7 @@ const Hero = () => {
             />
           </span>
         </h2>
-        <p className="text-sm lg:text-base text-gray-400 leading-relaxed">
+        <p className="text-sm lg:text-base text-gray-400 leading-relaxed mx-4">
           Skilled in design, development, and marketing, I create engaging websites, 
           track industry trends, and innovate digital projects to boost your online presence.
         </p>

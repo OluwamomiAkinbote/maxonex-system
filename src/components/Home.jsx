@@ -9,6 +9,7 @@ import FeaturesSection from "../components/FeatureSection";
 import Testimonials from "../components/Testimonials";
 import Footer from "../components/Footer";
 import ServicesSection from "../components/SeriviceSection";
+import Tools from "../components/Tools";
 
 
 
@@ -65,6 +66,9 @@ const Home = () => {
             </div>
             <div className="">
               <ProjectsDatas />
+            </div>
+            <div className="">
+              <Tools />
             </div>
             <div className="">
               <Testimonials />

@@ -38,8 +38,8 @@ const projects = [
 
 const ProjectsDatas = () => {
   return (
-    <div className=" text-white my-4">
-      <h1 className="text-4xl font-bold text-center mb-10">
+    <div className="mx-5 text-white my-4">
+      <h1 className="md:text-4xl font-bold text-center mb-10 xs:text-lg">
         Explore our <span className="text-purple-500">Projects</span>
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">

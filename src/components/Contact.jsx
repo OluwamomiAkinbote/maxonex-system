@@ -17,7 +17,7 @@ function ContactForm() {
 
   return (
   
-      <div className="bg-[#0d010f] border border-purple-950 rounded-lg shadow-lg p-8 max-w-7xl w-full my-8" id="contact">
+      <div className="bg-[#0d010f] border border-purple-950 rounded-lg shadow-lg p-8 max-w-7xl w-full my-8" id="contact mx-5">
         <h1 className="text-2xl font-bold text-center text-white mb-6 xs:text-lg">
           Get in <span className="text-purple-400">Touch</span>
         </h1>

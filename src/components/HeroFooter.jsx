@@ -1,7 +1,13 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 const HeroFooter = () => {
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact");
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <div className="relative text-white py-16">
       <div className="max-w-6xl mx-auto px-6 lg:px-8">
@@ -29,9 +35,12 @@ const HeroFooter = () => {
 
         {/* Buttons Section */}
         <div className="flex justify-center items-center space-x-4">
-          <Link to="#contact" className="bg-purple-600 text-white px-4 py-3 rounded-full font-semibold hover:bg-purple-700 transition">
+          <button
+            className="bg-purple-600 text-white px-4 py-3 rounded-full font-semibold hover:bg-purple-700 transition"
+            onClick={scrollToContact}
+          >
             Let's Talk
-          </Link>
+          </button>
           <button className="flex items-center space-x-2 text-white font-medium hover:underline">
             <span>My Work</span>
             <span className="font-bold">→</span>

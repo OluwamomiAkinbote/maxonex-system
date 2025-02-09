@@ -22,40 +22,18 @@ const Header = () => {
             location.pathname === "/about" ? "bg-purple-600" : ""
           }`}
         >
-          <i className="fas fa-folder text-white text-lg"></i>
+          <i className="fas fa-user text-white text-lg"></i>
         </Link>
         <Link
-          to="/wrench"
+          to="/contact"
           className={`icon flex items-center justify-center p-2 rounded-sm hover:bg-purple-500 transition duration-300 ${
-            location.pathname === "/wrench" ? "bg-purple-600" : ""
-          }`}
-        >
-          <i className="fas fa-wrench text-white text-lg"></i>
-        </Link>
-        <Link
-          to="/gift"
-          className={`icon flex items-center justify-center p-2 rounded-sm hover:bg-purple-500 transition duration-300 ${
-            location.pathname === "/gift" ? "bg-purple-600" : ""
-          }`}
-        >
-          <i className="fas fa-gift text-white text-lg"></i>
-        </Link>
-        <Link
-          to="/pencil"
-          className={`icon flex items-center justify-center p-2 rounded-sm hover:bg-purple-500 transition duration-300 ${
-            location.pathname === "/pencil" ? "bg-purple-600" : ""
-          }`}
-        >
-          <i className="fas fa-pencil-alt text-white text-lg"></i>
-        </Link>
-        <Link
-          to="/envelope"
-          className={`icon flex items-center justify-center p-2 rounded-sm hover:bg-purple-500 transition duration-300 ${
-            location.pathname === "/envelope" ? "bg-purple-600" : ""
+            location.pathname === "/contact" ? "bg-purple-600" : ""
           }`}
         >
           <i className="fas fa-envelope text-white text-lg"></i>
         </Link>
+
+
       </div>
       <Outlet />
     </div>

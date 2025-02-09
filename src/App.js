@@ -3,6 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
+import ContactHead from "./components/ContactHead";
 import ProjectDetails from "./components/ProjectDetails";
 import ChatBox from "./components/ChatBox"; // Import ChatBox component
 
@@ -32,6 +33,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutMe />} />
+            <Route path="/contact" element={<ContactHead />} />
             <Route path="/project/:title" element={<ProjectDetails />} />
           </Routes>
           <ChatBox /> {/* Add ChatBox component to App */}

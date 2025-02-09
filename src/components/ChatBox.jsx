@@ -16,7 +16,7 @@ export default function ChatBox() {
             <FaWhatsapp size={20} /> WhatsApp
           </button>
           <button
-            onClick={() => window.location.href = "/form"}
+            onClick={() => window.location.href = "/contact"}
             className="flex items-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
           >
             <FaCommentDots size={20} /> Message

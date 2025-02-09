@@ -2,6 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import realEstate from "../images/React-Real- Estate project.png";
 import addToCart from "../images/add-to-cart (1).png";
+import newstropy from "../images/Newstropy.png";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const projects = [
   {
@@ -27,6 +31,15 @@ const projects = [
   },
   {
     id: "2",
+    title: "Newstropy - Blogging Website",
+    image: newstropy,
+    link: "https://newstropy.onrender.com/",
+    description:
+    "Newstropy is a blogging website providing updates on current news including Politics, Sports, Trends, and more. Built using Django, HTML, Tailwind CSS, Render Cloud, and GitHub.",
+    technologies: ["Django", "HTML", "Tailwind CSS", "Render Cloud", "GitHub"],
+  },
+  {
+    id: "3",
     title: "Simple E-commerce Website",
     image: addToCart,
     link: "https://add-to-cart-ecommerce.vercel.app/",
@@ -37,12 +50,20 @@ const projects = [
 ];
 
 const ProjectsDatas = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <div className="mx-5 text-white my-4">
       <h1 className="md:text-4xl font-bold text-center mb-10 xs:text-lg">
         Explore our <span className="text-purple-500">Projects</span>
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <Slider {...settings}>
         {projects.map((project) => (
           <div
             key={project.id}
@@ -81,7 +102,7 @@ const ProjectsDatas = () => {
             </div>
           </div>
         ))}
-      </div>
+      </Slider>
     </div>
   );
 };

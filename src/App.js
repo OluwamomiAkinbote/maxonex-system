@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
 import ProjectDetails from "./components/ProjectDetails";
+import ChatBox from "./components/ChatBox"; // Import ChatBox component
 
 // Import the Loader component
 import Loader from "./components/Loader"; // Make sure this points to the correct file path
@@ -33,6 +34,7 @@ function App() {
             <Route path="/about" element={<AboutMe />} />
             <Route path="/project/:title" element={<ProjectDetails />} />
           </Routes>
+          <ChatBox /> {/* Add ChatBox component to App */}
         </>
       )}
     </div>

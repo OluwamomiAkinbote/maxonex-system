@@ -6,6 +6,7 @@ module.exports = {
     extend: {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'], // Keep your custom font
+        openSans: ['OpenSans', 'sans-serif'], // Keep your custom font
       },
       screens: {
         xs: '336px', // Custom breakpoint for extra-small screens

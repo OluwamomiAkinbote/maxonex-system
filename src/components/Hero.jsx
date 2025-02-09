@@ -12,7 +12,7 @@ const Hero = () => {
   ];
 
   return (
-    <div className="mb-6 space-y-10 mx-auto">
+    <div className="mb-6 space-y-10 mx-auto font-openSans">
       {/* Text Section */}
       <div className="text-center lg:text-left max-w-4xl mx-auto space-y-6 animate-fadeInUp">
         <h4 className="text-lg lg:text-xl text-gray-300">
@@ -37,7 +37,7 @@ const Hero = () => {
             />
           </span>
         </h2>
-        <p className="text-sm lg:text-base text-gray-400 leading-relaxed mx-4">
+        <p className="text-md lg:text-base text-gray-400 leading-relaxed mx-4">
           Skilled in design, development, and marketing, I create engaging websites, 
           track industry trends, and innovate digital projects to boost your online presence.
         </p>

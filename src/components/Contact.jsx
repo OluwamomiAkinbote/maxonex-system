@@ -44,10 +44,10 @@ export default function Form() {
   };
 
   return (
-    <section id="contact" className="flex justify-center items-center py-10 bg-[#0d010f]">
+    <section id="contact" className="flex justify-center items-center py-10 bg-[#0d010f] font-openSans">
       <div className="w-full max-w-2xl p-6 bg-[#0d010f] rounded-lg shadow-md border border-[#320234] text-[#cfc0d8]">
         <h2 className="text-xl font-bold mb-4 text-center">INTERESTED IN DISCUSSING A PROJECT WITH US?</h2>
-        <p className="mb-6 text-center text-[#cfc0d8]">
+        <p className="mb-6 text-center text-[#cfc0d8] text-sm">
           Do you have a project in mind that you feel our approach would work well for? We’re always happy to discuss
           your project with you and put together a free proposal. Just fill out the form below or give us a call to get
           started!

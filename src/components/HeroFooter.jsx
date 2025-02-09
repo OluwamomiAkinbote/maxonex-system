@@ -15,19 +15,19 @@ const HeroFooter = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 text-center gap-8 mb-12">
           <div>
             <h2 className="text-4xl lg:text-5xl font-bold">+4</h2>
-            <p className="text-gray-400 text-sm lg:text-base mt-2">
+            <p className="text-gray-400 text-md lg:text-base mt-2">
               Years of Experience
             </p>
           </div>
           <div>
             <h2 className="text-4xl lg:text-5xl font-bold">+15</h2>
-            <p className="text-gray-400 text-sm lg:text-base mt-2">
+            <p className="text-gray-400 text-md lg:text-base mt-2">
               Projects Completed
             </p>
           </div>
           <div>
             <h2 className="text-4xl lg:text-5xl font-bold">+8</h2>
-            <p className="text-gray-400 text-sm lg:text-base mt-2">
+            <p className="text-gray-400 text-md lg:text-base mt-2">
               Worldwide Clients
             </p>
           </div>

@@ -35,6 +35,11 @@ export default function Form() {
       }
 
       setSuccessMessage("Form submitted successfully!");
+
+      // ✅ Fire Facebook Pixel "CompleteRegistration" event
+      if (window.fbq) {
+        window.fbq("track", "CompleteRegistration");
+      }
     } catch (error) {
       console.error("Error:", error);
       setSuccessMessage("Failed to submit. Try again.");

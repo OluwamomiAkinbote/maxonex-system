@@ -40,6 +40,14 @@ export default function Form() {
       if (window.fbq) {
         window.fbq("track", "CompleteRegistration");
       }
+
+      // ✅ Fire Twitter Event Pixel
+      if (window.twq) {
+        window.twq("event", "tw-p531h-p531i", {
+          email_address: email || null,
+          phone_number: phone || null,
+        });
+      }
     } catch (error) {
       console.error("Error:", error);
       setSuccessMessage("Failed to submit. Try again.");

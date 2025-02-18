@@ -5,18 +5,35 @@ import { IoChatbubbleEllipsesSharp } from "react-icons/io5";
 export default function ChatBox() {
   const [open, setOpen] = useState(false);
 
+  const trackContactEvent = () => {
+    // ✅ Fire Facebook Pixel "Contact" event safely
+    if (window.fbq) {
+      window.fbq("track", "Contact");
+    }
+  };
+
+  const handleWhatsAppClick = () => {
+    trackContactEvent();
+    window.open("https://wa.me/+2349158459513?text=Hello%2C%20Maxonex%20System%2C%20I%20need%20your%20Web%20Design%20Services", "_blank");
+  };
+
+  const handleMessageClick = () => {
+    trackContactEvent();
+    window.location.href = "/contact";
+  };
+
   return (
     <div className="fixed right-4 bottom-10 flex flex-col items-start gap-2">
       {open && (
         <div className="bg-white p-3 shadow-lg rounded-lg flex flex-col gap-2">
           <button
-            onClick={() => window.open("https://wa.me/+2349158459513?text=Hello%2C%20Maxonex%20System%2C%20I%20need%20your%20Web%20Design%20Services", "_blank")}
+            onClick={handleWhatsAppClick}
             className="flex items-center gap-2 bg-green-500 text-white px-4 py-2 rounded-lg hover:bg-green-600"
           >
             <FaWhatsapp size={20} /> WhatsApp
           </button>
           <button
-            onClick={() => window.location.href = "/contact"}
+            onClick={handleMessageClick}
             className="flex items-center gap-2 bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600"
           >
             <FaCommentDots size={20} /> Message
